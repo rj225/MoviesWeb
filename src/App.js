@@ -1,10 +1,22 @@
-
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Provider } from 'react-redux'; 
+import store from './store/Store'; 
+import MovieListPage from './components/MovieListPage';
+import FavoriteMoviesPage from './components/FavoriteMoviesPage';
+import Navigation from './components/Navigation';
 
 function App() {
   return (
-    <h1 className="text-3xl text-center font-bold underline">
-      Hello world!
-    </h1>
+    <Provider store={store}> 
+      <Router>
+        <Navigation/>
+        <Routes>
+          <Route path="/" element={<MovieListPage />} />
+          <Route path="/favorites" element={<FavoriteMoviesPage />} />
+        </Routes>
+      </Router>
+    </Provider>
   );
 }
 

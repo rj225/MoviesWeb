@@ -3,7 +3,7 @@ import {
   FETCH_MOVIES_SUCCESS,
   ADD_TO_FAVORITES,
   REMOVE_FROM_FAVORITES,
-} from './actions';
+} from '../actions/Actions';
 
 const initialState = {
   movies: [],
