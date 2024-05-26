@@ -12,7 +12,7 @@ const FavoriteMoviesPage = () => {
       <h1 className="sm:text-2xl text-center text-lg font-bold my-4">Favorite Movies</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {favoriteMovies.map((movie) => (
-          <a key={movie.id} href={movie.imdb_url} target="_blank" rel="noopener noreferrer" className="border bg-gradient-to-br from-cyan-100 to via-red-100 bg-yellow-300 rounded-lg shadow-lg p-4 block hover:scale-105 duration-300 hover:via-cyan-300">
+          <a key={movie.id} href={movie.imdb_url} target="_blank" rel="noopener noreferrer" className="border bg-gradient-to-br from-cyan-100 to via-red-100 bg-yellow-300 rounded-lg shadow-lg p-4 block hover:scale-105 duration-300 hover:via-cyan-300 h-40">
             <div>
               <img src={movie.image} alt={movie.movie} className="w-full h-auto mb-2 rounded-lg" />
             </div>
